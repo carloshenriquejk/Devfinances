@@ -1,5 +1,4 @@
 # devfinances
-## 📖 Sobre   
 O projeto **Devfinances** foi desenvolvido durante a maratona Discovery com **HTML, JavaScript e CSS Completo** da **[rocketseat](https://www.rocketseat.com.br/discover)**. Durante o curso, colocando todos os conceitos em prática desenvolvendo o **código do site** da **Devfinances**,Aplicação de controle financeiro para gerenciar o financeiro das pessoas de forma simples e rapida, onde desenvolvemos conceitos como **HTML semântico**, **JavaScript Puro**, **otimização** de imagens e arquivos CSS.  
 
 [![Bikcraft]( https://i.imgur.com/0QjTveP.png "Clique para acessar o projeto")](https://bikcra.netlify.app "Clique para acessar o projeto")   
