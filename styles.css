@@ -1,0 +1,310 @@
+/*global===============*/
+:root {
+    --color-dark: #363f5f;
+    --green: #49aa26;
+    --red: #e92929
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 93.75%;
+}
+body{
+    background: #f0f2f5;
+    font-family: 'poppins', sans-serif;
+}
+.sr-only{
+    /*tira o texto da tela/oculta*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+
+}
+.container {
+    /*espaçamento*/
+    width: min(90vw, 800px);
+   /*min()é uma funçõa que procura o menor espaçamento*/
+    /* 90vw e 800px é a largura*/
+    margin: auto;
+}
+/* links e botones================*/
+a{
+    color: var(--green);
+    /* tira a formatação do botão*/
+    text-decoration: none;
+}
+
+/* quando passamos o cursor do mouse por cima do 
+nome ele muda de cor*/
+a:hover {
+    color: #3dd705;
+
+}
+button{
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    color: white;
+    background: var(--green);
+
+    padding: 0;
+
+    border-radius:  0,25rem;
+    /* quando passa o mouse em cima fica uma mãozinha*/
+    cursor: pointer;
+}
+button:hover{
+    background: #4ce913;
+
+}
+.button.new {
+    /* mescl as propriedades do inline com o block*/
+    display: inline-block;
+    margin: 0.8rem;
+}
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+}
+.button.cancel:hover {
+    opacity: 1;
+}
+
+/* titles================*/
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-dark);
+
+    font-weight: normal;
+}
+
+/* Header================*/
+header {
+    background: #317a16;
+    /*preenche toda a tela dentro do header*/
+    padding: 2rem 0 10rem;
+    /* deixa o texto no meio*/
+    text-align: center;
+}
+#logo{
+    color: #fff;
+    font-weight: 100;
+
+}
+/* balance================*/
+#balance{
+    margin-top: -8rem;
+}
+#balance h2{
+    color: white;
+    margin-top: 0;
+}
+/* cards================*/
+.card{
+    background: white;
+    padding: 1.5rem 2rem;
+/* preenchimento 1.5 cima e embaixo/ 2 nas laterais*/
+    border-radius: 0.25rem;
+/* arredondamento das bordas*/
+    margin-bottom: 2rem;
+    color: var(--color-dark);
+
+}
+.card h3{
+    /* o peso da fonte*/
+    font-weight: normal;
+    
+    /* o tamanho da fonte*/
+    font-size: 1rem;
+   /* faz os elementos sobrepor os outros*/
+    display: flex;
+    /* centraliza os elementos*/
+    align-items: center;
+    /* da um espaço e organiza os elementos*/
+    justify-content: space-between;
+
+
+}
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    margin-top: 1rem;
+}
+.total{
+    background: var(--green);
+    color: white;
+
+
+}
+#transaction{
+    display: block;
+    width: 100%;
+    /* rolagem do mause */
+    overflow-x: auto;
+}
+/* table================*/
+#data-table {
+
+    width: 100%;
+/* faz a tabela pegar o espaço da tela toda*/
+    border-spacing: 0 0.5rem ;
+    color: #969cb3;
+
+
+}
+/*  bordas das caixas  */
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 1rem 0 0 1rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 1rem  1rem 0;
+}
+table thead th {
+    background:white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+
+
+}
+table tbody tr {
+    opacity: 0.8
+}
+table tbody tr:hover {
+    opacity: 1
+}
+table tbody td {
+    background: white;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+td.descripton{
+    color: var(--color-dark);
+}
+td.income{
+    color: #12a454;
+}
+td.expense{
+    color: var(--red) ;
+}
+/* model================*/
+/* é a caixinha de nova transação parte superficila*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.7);
+/* destrava alguns comandos*/
+    position: fixed;
+    top: 0;
+    /* é a caixinha de nova transação*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+/*empilhamento das caixas*/
+    z-index: 999;
+
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* é a caixinha de nova transação*/
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+
+    position: relative;
+    z-index: 1;
+}
+/* formulario================*/
+#form{
+    max-width: 500px;
+    
+}
+#form h2{
+    margin-top: 0;
+}
+/* a caixinha de nova tansação*/
+input{
+    border: none;
+    border-radius: 0.2rem;
+    /*espaçamento das colunas*/
+    padding: 00.8rem;
+    /* a coluna preenchento totalmente a tela*/
+    width: 100%;
+}
+.input-group{
+    margin-top: 0.8rem;
+}
+.input-group small {
+    opacity: 0.8;
+}
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+/* footer================*/
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--color-dark);
+
+    opacity: 0.6;   
+}
+/*responsividade*/
+
+@media (min-width: 800px){
+    html{
+        /* o tamanho da tela*/
+        font-size: 85.5%;
+    }
+    #balance {
+        /*divide as colunas na mesma linha*/
+        display: grid;
+        /*é o tamanho das colons em fração*/
+        grid-template-columns: repeat(3, 1fr);
+        /* o espaçamento entre as colunas*/
+        gap: 2rem;
+
+    }
+
+}
