@@ -1,12 +1,12 @@
 # devfinances
 
-[![Bikcraft]( https://i.imgur.com/0QjTveP.png "Clique para acessar o projeto")](https://bikcra.netlify.app "Clique para acessar o projeto")   
+[![Bikcraft]( https://i.imgur.com/0QjTveP.png "Clique para acessar o projeto")](https://devfinan.netlify.app "Clique para acessar o projeto")   
 
 ## 📖 Sobre   
 O projeto **Devfinances** foi desenvolvido durante a maratona Discovery com **HTML, JavaScript e CSS Completo** da **[rocketseat](https://www.rocketseat.com.br/discover)**. Durante o curso, colocando todos os conceitos em prática desenvolvendo o **código do site** da **Devfinances**,Aplicação de controle financeiro para gerenciar o financeiro das pessoas de forma simples e rapida, onde desenvolvemos conceitos como **HTML semântico**, **JavaScript Puro**, **otimização** de imagens e arquivos CSS.  
--
-Você pode acessar o projeto clicando [aqui](https://bikcra.netlify.app).
----
+
+
+- **Você pode acessar o projeto clicando [aqui](https://devfinan.netlify.app).**
 
 
 ## 🚀 Tecnologias e ferramentas utilizadas
